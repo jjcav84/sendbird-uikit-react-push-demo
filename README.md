@@ -16,12 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.
 
-Next, to start your local push server open an additional terminal window and run:
+To start your push server open an additional terminal window and run:
 
 ### `cd server && npm start`
 
-Changes directory to ./server/ and starts the [express.js](https://expressjs.com) server listening on [http://localhost:8080](http://localhost:8080) with the following endpoints.
-* POST endpoint '/api/registerToken' for storing FCM tokens
+Changes to `server` directory and starts an [express.js](https://expressjs.com) server listening on [http://localhost:8080](http://localhost:8080) with the following endpoints.
+* POST endpoint '/api/registerToken' for storing Firebase Cloud Messaging tokens
 * POST endpoint '/api/sendbird' for consuming the [Sendbird](https://sendbird.com) webhook events
 
 * **_Note: If you don't have nodemon installed on your express server install it by running: `npm i -g nodemon`_**
