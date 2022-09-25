@@ -1,7 +1,6 @@
 import SendBird from 'sendbird';
 import firebase from 'firebase/app'
 import "firebase/messaging";
-//import SendBird from 'sendbird';
 import { APP_ID, USER_ID, VAPIDKEY } from "./const";
 
 firebase.initializeApp({
