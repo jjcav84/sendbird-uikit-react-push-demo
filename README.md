@@ -24,7 +24,7 @@ Changes to `server` directory and starts an [express.js](https://expressjs.com) 
 * POST endpoint '/api/registerToken' for storing Firebase Cloud Messaging tokens
 * POST endpoint '/api/sendbird' for consuming the [Sendbird](https://sendbird.com) webhook events
 
-* **_Note: If you don't have nodemon installed on your express server install it by running: `npm i -g nodemon`_**
+* **_Note: If you don't have nodemon installed on the express please run: `npm i -g nodemon`_**
 
 Build the app for production to the `build` folder by running:
 
