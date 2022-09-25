@@ -27,17 +27,16 @@ sb.connect(userId, (user, error) => {
       messaging.getToken({ vapidKey: vapidKey })
         .then(token => {
           if (token) {
+            sb.registerGCMPushTokenForCurrentUser(token, (response, error) => {
+              if (error) console.log(error);
+              console.log("Token Registered:", token)
+            });
             const requestOptions = {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ token: token })
             };
             fetch('https://3c09-2603-8081-6d00-159a-b541-7282-da7b-ec15.ngrok.io/api/registerToken', requestOptions);
-            sb.registerGCMPushTokenForCurrentUser(token, (response, error) => {
-              if (error) console.log(error);
-              console.log("Token Registered:", token)
-            });
-
           }
         })
         .catch(err => {
