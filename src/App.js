@@ -4,8 +4,8 @@ import "@sendbird/uikit-react/dist/index.css";
 import CustomizedApp from "./CustomizedApp";
 import "./styles.css";
 import "./App.css";
-import { messaging } from "./init-firebase-messaging";
 import { APP_ID, USER_ID, NICKNAME} from "./const";
+import { messaging } from "./init-firebase-messaging";
 
 export default function App() {
   if (!APP_ID) {

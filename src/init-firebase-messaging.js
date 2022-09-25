@@ -4,14 +4,14 @@ import "firebase/messaging";
 //import SendBird from 'sendbird';
 import { APP_ID, USER_ID, VAPIDKEY } from "./const";
 
-const initializedFirebaseApp = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: "********",
   authDomain: "*****-uikit-react.firebaseapp.com",
   projectId: "*****-uikit-react",
   storageBucket: "*****-uikit-react.appspot.com",
   messagingSenderId: "********",
   appId: "1:********:web:52428d21bbd26f08f40233",
-  measurementId: "G-*****"
+  measurementId: "G-********"
 });
 
 const messaging = initializedFirebaseApp.messaging();
@@ -32,7 +32,7 @@ sb.connect(userId, (user, error) => {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ token: token })
             };
-            fetch('https://3c09-2603-8081-6d00-159a-b541-7282-da7b-ec15.*****.io/api/registerToken', requestOptions);
+            fetch('https://3c09-2603-8081-6d00-159a-b541-7282-da7b-ec15.ngrok.io/api/registerToken', requestOptions);
             sb.registerGCMPushTokenForCurrentUser(token, (response, error) => {
               if (error) console.log(error);
               console.log("Token Registered:", token)
