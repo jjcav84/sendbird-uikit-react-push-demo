@@ -3,11 +3,11 @@ import firebase from 'firebase/app'
 import "firebase/messaging";
 import { APP_ID, USER_ID, VAPIDKEY } from "./const";
 
-firebase.initializeApp({
+const initializedFirebaseApp = firebase.initializeApp({
   apiKey: "********",
-  authDomain: "*****-uikit-react.firebaseapp.com",
-  projectId: "*****-uikit-react",
-  storageBucket: "*****-uikit-react.appspot.com",
+  authDomain: "********-uikit-react.firebaseapp.com",
+  projectId: "********-uikit-react",
+  storageBucket: "********-uikit-react.appspot.com",
   messagingSenderId: "********",
   appId: "1:********:web:52428d21bbd26f08f40233",
   measurementId: "G-********"
@@ -50,7 +50,7 @@ sb.connect(userId, (user, error) => {
 messaging.onMessage(function (payload) {
   console.log('[firebase-messaging-sw.js] Received message ', payload);
   new Notification(payload.data.title, {
-    icon: './sendbird-logo.png',
+    icon: '/sendbird-logo.png',
     body: payload.data.body,
   });
 });

@@ -12,3 +12,13 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+
+messaging.onBackgroundMessage(function (payload) {
+    console.log('[firebase-messaging-sw.js] Received background message ', payload);
+    const notificationTitle = 'Profanity filter triggered';
+    const notificationOptions = {
+        body: 'Background Message body.',
+        icon: '/sendbird-logo.png'
+    };
+    self.registration.showNotification(notificationTitle, notificationOptions);
+});
